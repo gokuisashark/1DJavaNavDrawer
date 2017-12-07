@@ -47,9 +47,17 @@ public class EnrolmentFragment extends Fragment {
         ArrayAdapter<String> course1AutoViewAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(),
                 android.R.layout.simple_dropdown_item_1line, MODULES);
-        AutoCompleteTextView course1AutoView = (AutoCompleteTextView)
+        final AutoCompleteTextView course1AutoView = (AutoCompleteTextView)
                 view.findViewById(R.id.choosecourse1autoview);
         course1AutoView.setAdapter(course1AutoViewAdapter);
+        course1AutoView.setThreshold(1);
+        course1AutoView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                course1AutoView.showDropDown();
+            }
+        });
         return view;
     }
 
