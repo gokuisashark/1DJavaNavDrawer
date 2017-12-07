@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar_black"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_announcements"
+            android:icon="@drawable/ic_announcements_black"
+            android:title="Announcements" />
+        <item
+            android:id="@+id/nav_consultation"
+            android:icon="@drawable/ic_consultation_black"
+            android:title="Consultation" />
+        <item
+            android:id="@+id/nav_enrolment"
+            android:icon="@drawable/ic_enrolment_black"
+            android:title="Enrolment" />
+    </group>
+
+
+</menu>
