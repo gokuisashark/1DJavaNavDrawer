@@ -41,8 +41,8 @@
         android:layout_alignLeft="@+id/pillarSpinner"
         android:ems="13"/>
 
-    <MultiAutoCompleteTextView
-        android:id="@+id/choosecourse1multiview"
+    <AutoCompleteTextView
+        android:id="@+id/choosecourse1autoview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/chooseCourse1Text"
