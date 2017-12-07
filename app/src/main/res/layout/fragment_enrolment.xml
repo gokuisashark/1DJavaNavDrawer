@@ -1,5 +1,6 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enrolmentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,12 +14,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Choose your pillar:"/>
+        android:layout_marginLeft="36dp"
+        android:textSize="20sp"
+        android:text="Choose your pillar:"
+        android:ems="13" />
 
-    <MultiAutoCompleteTextView
-        android:id="@+id/multiAutoCompleteTextView"
+    <Spinner
+        android:id="@+id/pillarSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enrolPillar"
+        android:layout_below="@+id/enrolPillar"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="5dp"
+        >
+    </Spinner>
+
+    <TextView
+        android:id="@+id/chooseCourse1Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MultiAutoCompleteTextView" />
+        android:layout_below="@+id/pillarSpinner"
+        android:text="Choose Course 1:"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/pillarSpinner"
+        android:ems="13"/>
 
-</LinearLayout>
+    <MultiAutoCompleteTextView
+        android:id="@+id/choosecourse1multiview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseCourse1Text"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Enter course name"/>
+
+</RelativeLayout>

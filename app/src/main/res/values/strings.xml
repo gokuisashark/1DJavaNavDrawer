@@ -8,4 +8,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="pillars_array">
+        <item>ASD</item>
+        <item>EPD</item>
+        <item>ESD</item>
+        <item>ISTD</item>
+        <item>Freshmore</item>
+    </string-array>
 </resources>
