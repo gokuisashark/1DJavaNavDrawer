@@ -33,7 +33,6 @@ public class EnrolmentFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_enrolment, container, false);
 
-
         //1st group: EnrolPillar TextView and EnrolPillar Spinner, try not to split
         TextView enrolPillar = (TextView) view.findViewById(R.id.enrolPillar);
         Spinner enrolSpinner = (Spinner) view.findViewById(R.id.pillarSpinner);
@@ -44,20 +43,54 @@ public class EnrolmentFragment extends Fragment {
         enrolSpinner.setAdapter(enrolSpinnerAdapter);
 
         //2nd group: Course1 TextView and Course1 AutoCompleteTextView, don't split
-        ArrayAdapter<String> course1AutoViewAdapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> AutoViewAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(),
                 android.R.layout.simple_dropdown_item_1line, MODULES);
+
         final AutoCompleteTextView course1AutoView = (AutoCompleteTextView)
                 view.findViewById(R.id.choosecourse1autoview);
-        course1AutoView.setAdapter(course1AutoViewAdapter);
+        course1AutoView.setAdapter(AutoViewAdapter);
         course1AutoView.setThreshold(1);
         course1AutoView.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 course1AutoView.showDropDown();
             }
         });
+
+        final AutoCompleteTextView course2AutoView = (AutoCompleteTextView)
+                view.findViewById(R.id.choosecourse2autoview);
+        course2AutoView.setAdapter(AutoViewAdapter);
+        course2AutoView.setThreshold(1);
+        course2AutoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                course2AutoView.showDropDown();
+            }
+        });
+
+        final AutoCompleteTextView course3AutoView = (AutoCompleteTextView)
+                view.findViewById(R.id.choosecourse3autoview);
+        course3AutoView.setAdapter(AutoViewAdapter);
+        course3AutoView.setThreshold(1);
+        course3AutoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                course3AutoView.showDropDown();
+            }
+        });
+
+        final AutoCompleteTextView course4AutoView = (AutoCompleteTextView)
+                view.findViewById(R.id.choosecourse4autoview);
+        course4AutoView.setAdapter(AutoViewAdapter);
+        course4AutoView.setThreshold(1);
+        course4AutoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                course4AutoView.showDropDown();
+            }
+        });
+
         return view;
     }
 
