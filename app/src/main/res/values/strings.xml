@@ -16,4 +16,8 @@
         <item>ISTD</item>
         <item>Freshmore</item>
     </string-array>
+
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+
 </resources>
