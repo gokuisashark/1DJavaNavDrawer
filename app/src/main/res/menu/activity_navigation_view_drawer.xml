@@ -20,6 +20,9 @@
             android:id="@+id/nav_enrolment"
             android:icon="@drawable/ic_enrolment_black"
             android:title="Enrolment" />
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_enrolment_black"
+            android:title="Logout"/>
     </group>
 
 

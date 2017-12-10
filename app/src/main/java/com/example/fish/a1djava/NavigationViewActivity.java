@@ -1,5 +1,6 @@
 package com.example.fish.a1djava;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.example.fish.a1djava.calendar.BasicActivity;
+import com.example.fish.a1djava.calendar.Consultation;
 
 public class NavigationViewActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,19 +89,8 @@ public class NavigationViewActivity extends AppCompatActivity
         if (id == R.id.nav_calendar) {
             // Handle the camera action
             Toast.makeText(this, "Calendar selected", Toast.LENGTH_SHORT).show();
-
-            //fragment is something similar to activity, but does not edit / add on to your AndroidManifest
-            CalendarFragment cameraFragment = new CalendarFragment();
-            FragmentManager manager = getSupportFragmentManager();
-
-            //replace(a,b) = replace a with b
-            //below example, replace mainconstraintlayout_content (which is the id given to the head of the main content view, with the newly made cameraFragment
-            manager.beginTransaction().replace(
-                    R.id.mainconstraintlayout_content,
-                    cameraFragment,
-                    cameraFragment.getTag()
-            ).commit();
-
+            Intent intent = new Intent(NavigationViewActivity.this, BasicActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_announcements) {
             Toast.makeText(this, "Announcements selected", Toast.LENGTH_SHORT).show();
@@ -111,13 +104,9 @@ public class NavigationViewActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_consultation) {
             Toast.makeText(this, "Consultation booking selected", Toast.LENGTH_SHORT).show();
-            ConsultationFragment consultationFragment = new ConsultationFragment();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(
-                    R.id.mainconstraintlayout_content,
-                    consultationFragment,
-                    consultationFragment.getTag()
-            ).commit();
+            Intent intent = new Intent(NavigationViewActivity.this, Consultation.class);
+            startActivity(intent);
+
 
         } else if (id == R.id.nav_enrolment) {
             Toast.makeText(this, "Course enrolment selected", Toast.LENGTH_SHORT).show();
@@ -129,9 +118,12 @@ public class NavigationViewActivity extends AppCompatActivity
                     enrolmentFragment.getTag()
             ).commit();
 
+        } else if (id == R.id.nav_logout) {
+            Toast.makeText(this, "Logout selected", Toast.LENGTH_SHORT).show();
+            LogoutFragment logoutFragment = new LogoutFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

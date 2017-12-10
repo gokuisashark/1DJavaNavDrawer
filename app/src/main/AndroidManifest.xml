@@ -26,6 +26,23 @@
         <activity android:name=".HomePage" />
         <activity android:name=".ForgetPassword" />
         <activity android:name=".Register" />
+        <activity android:name=".ShowAlgo"/>
+        <activity android:name=".ShowCs" />
+        <activity android:name=".ShowJava" />
+        <activity
+            android:name=".calendar.BasicActivity"
+            android:label="Calendar" >
+        </activity>
+
+        <activity
+            android:name=".calendar.Consultation"
+            android:label="Consultation" >
+        </activity>
+
+        <activity
+            android:name=".calendar.Professor_Consultation"
+            android:label="Professor_Consultation" >
+        </activity>
 
     </application>
 

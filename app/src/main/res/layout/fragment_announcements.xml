@@ -1,29 +1,32 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.fish.a1djava.AnnouncementsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-
-    <TextView
-        android:id="@+id/accouncementTitle"
+    <Button
+        android:id="@+id/java"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bla bla bla whatever the announcement title here is!"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:padding="8dp"
-        android:layout_marginTop="20dp"/>
+        android:text="50.001 Intro to Infomaiton System"
+        android:layout_margin="20dp"/>
 
-    <TextView
-        android:id="@+id/announcementContent"
+    <Button
+        android:id="@+id/compstruc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bla bla bla whatever the announcement content here is!"
-        android:textStyle="italic"
-        android:textAlignment="center"
-        android:padding="8dp"/>
-</LinearLayout>
+        android:text="50.002 Computer Structure"
+        android:layout_below="@+id/java"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/algo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="50.004 Algorithm"
+        android:layout_below="@+id/compstruc"
+        android:layout_margin="20dp" />
+
+
+</RelativeLayout>
